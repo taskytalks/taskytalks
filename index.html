@@ -4,11 +4,100 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tasky Talks</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#09090f,#151529,#0c1020);
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+}
+.card{
+max-width:900px;
+width:100%;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.15);
+border-radius:24px;
+padding:50px;
+text-align:center;
+box-shadow:0 20px 60px rgba(0,0,0,.45);
+}
+.badge{
+display:inline-block;
+padding:8px 16px;
+border-radius:999px;
+background:#22c55e;
+color:#08120a;
+font-weight:bold;
+margin-bottom:20px;
+}
+h1{
+font-size:56px;
+margin-bottom:10px;
+}
+p{
+opacity:.9;
+line-height:1.8;
+font-size:18px;
+}
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:16px;
+margin:40px 0;
+}
+.feature{
+background:rgba(255,255,255,.06);
+padding:18px;
+border-radius:16px;
+}
+.whatsapp{
+display:inline-block;
+padding:22px 42px;
+font-size:28px;
+font-weight:bold;
+background:#25D366;
+color:#fff;
+text-decoration:none;
+border-radius:18px;
+transition:.3s;
+}
+.whatsapp:hover{
+transform:translateY(-4px) scale(1.03);
+box-shadow:0 15px 35px rgba(37,211,102,.45);
+}
+footer{
+margin-top:30px;
+opacity:.7;
+font-size:14px;
+}
+</style>
 </head>
-
 <body>
-
+<div class="card">
+<div class="badge">TRUSTED TALKS</div>
 <h1>Tasky Talks</h1>
+<p>Professional support team • Fast response • Secure communication • Quick payment • Friendly assistance</p>
 
+<div class="features">
+<div class="feature">🔒 Secure Communication</div>
+<div class="feature">⚡ Fast Response</div>
+<div class="feature">💸 Quick Payment</div>
+<div class="feature">👨‍💼 Professional Support Team</div>
+</div>
+
+<a class="whatsapp" href="https://wa.me/919528396868" target="_blank">
+Contact Us on WhatsApp
+</a>
+
+<footer>
+© 2026 Tasky Talks. All rights reserved.
+</footer>
+</div>
 </body>
 </html>
