@@ -6,98 +6,39 @@
 <title>Tasky Talks</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{
-font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#09090f,#151529,#0c1020);
-color:#fff;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-padding:20px;
-}
-.card{
-max-width:900px;
-width:100%;
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,.15);
-border-radius:24px;
-padding:50px;
-text-align:center;
-box-shadow:0 20px 60px rgba(0,0,0,.45);
-}
-.badge{
-display:inline-block;
-padding:8px 16px;
-border-radius:999px;
-background:#22c55e;
-color:#08120a;
-font-weight:bold;
-margin-bottom:20px;
-}
-h1{
-font-size:56px;
-margin-bottom:10px;
-}
-p{
-opacity:.9;
-line-height:1.8;
-font-size:18px;
-}
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:16px;
-margin:40px 0;
-}
-.feature{
-background:rgba(255,255,255,.06);
-padding:18px;
-border-radius:16px;
-}
-.whatsapp{
-display:inline-block;
-padding:22px 42px;
-font-size:28px;
-font-weight:bold;
-background:#25D366;
-color:#fff;
-text-decoration:none;
-border-radius:18px;
-transition:.3s;
-}
-.whatsapp:hover{
-transform:translateY(-4px) scale(1.03);
-box-shadow:0 15px 35px rgba(37,211,102,.45);
-}
-footer{
-margin-top:30px;
-opacity:.7;
-font-size:14px;
-}
+body{font-family:Arial,sans-serif;background:linear-gradient(135deg,#0f172a,#111827,#1f2937);color:#fff}
+header{display:flex;justify-content:flex-end;padding:20px}
+.top-btn,.main-btn{background:#25D366;color:#fff;text-decoration:none;font-weight:bold;border-radius:999px}
+.top-btn{padding:12px 22px}
+.container{max-width:900px;margin:40px auto;padding:20px;text-align:center}
+h1{font-size:64px;margin:40px 0 20px}
+.main-btn{display:inline-block;padding:22px 42px;font-size:28px;margin:10px 0 40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);padding:22px;border-radius:18px}
+footer{text-align:center;padding:40px 20px;color:#bbb}
 </style>
 </head>
 <body>
-<div class="card">
-<div class="badge">TRUSTED TALKS</div>
+<header>
+<a class="top-btn" href="https://wa.me/919528396868?text=Hey%2C%20can%20I%20know%20more%20about%20your%20business%3F">Contact Us on WhatsApp</a>
+</header>
+
+<div class="container">
 <h1>Tasky Talks</h1>
-<p>Professional support team • Fast response • Secure communication • Quick payment • Friendly assistance</p>
 
-<div class="features">
-<div class="feature">🔒 Secure Communication</div>
-<div class="feature">⚡ Fast Response</div>
-<div class="feature">💸 Quick Payment</div>
-<div class="feature">👨‍💼 Professional Support Team</div>
-</div>
-
-<a class="whatsapp" href="https://wa.me/919528396868" target="_blank">
+<a class="main-btn" href="https://wa.me/919528396868?text=Hey%2C%20can%20I%20know%20more%20about%20your%20business%3F">
 Contact Us on WhatsApp
 </a>
 
-<footer>
-© 2026 Tasky Talks. All rights reserved.
-</footer>
+<div class="grid">
+<div class="card">🔒<br><br><b>Secure Communication</b></div>
+<div class="card">⚡<br><br><b>Fast Response</b></div>
+<div class="card">💸<br><br><b>Quick Payment</b></div>
+<div class="card">👨‍💼<br><br><b>Professional Support Team</b></div>
 </div>
+
+</div>
+
+<footer>© 2026 Tasky Talks. All rights reserved.</footer>
 </body>
 </html>
