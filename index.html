@@ -6,21 +6,6 @@
 
 <title>Tasky Talks</title>
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init', '1559544242206365');
-fbq('track', 'PageView');
-</script>
-
 <style>
 
 *{
@@ -33,9 +18,10 @@ body{
     font-family:Arial, sans-serif;
     color:white;
     min-height:100vh;
+    overflow-x:hidden;
 
     background:
-    linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.80)),
+    linear-gradient(rgba(0,0,0,0.68), rgba(0,0,0,0.88)),
     url('poster.jpg');
 
     background-size:cover;
@@ -47,139 +33,200 @@ body{
 .overlay{
     width:100%;
     min-height:100vh;
-    backdrop-filter:blur(2px);
-    background:rgba(0,0,0,0.18);
+    backdrop-filter:blur(5px);
+}
+
+.glow{
+    position:fixed;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    filter:blur(100px);
+    z-index:-1;
+    animation:float 8s ease-in-out infinite;
+}
+
+.glow1{
+    background:rgba(37,211,102,0.30);
+    top:-120px;
+    left:-100px;
+}
+
+.glow2{
+    background:rgba(255,255,255,0.18);
+    bottom:-120px;
+    right:-100px;
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(30px);}
+    100%{transform:translateY(0px);}
 }
 
 header{
     width:100%;
     display:flex;
     justify-content:flex-end;
-    padding:25px;
+    padding:28px;
 }
 
 .top-btn{
-    background:linear-gradient(135deg,#25D366,#128C7E);
-    color:white;
+    background:linear-gradient(135deg,#25D366,#ffffff);
+    color:#111;
     text-decoration:none;
-    padding:14px 28px;
+    padding:15px 32px;
     border-radius:999px;
     font-weight:bold;
-    box-shadow:0 10px 30px rgba(37,211,102,.35);
+    font-size:16px;
+    box-shadow:0 10px 35px rgba(37,211,102,.45);
     transition:0.3s ease;
 }
 
 .top-btn:hover{
-    transform:translateY(-3px);
+    transform:translateY(-4px) scale(1.03);
 }
 
 .container{
-    max-width:1100px;
+    max-width:1150px;
     margin:auto;
-    padding:40px 20px 70px;
+    padding:50px 20px 80px;
     text-align:center;
 }
 
-h1{
-    font-size:88px;
-    font-weight:900;
-    text-shadow:0 6px 20px rgba(0,0,0,.8);
+.logo-badge{
+    display:inline-block;
+    padding:12px 24px;
+    border-radius:999px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.18);
+    margin-bottom:28px;
+    backdrop-filter:blur(10px);
+    font-size:15px;
+    letter-spacing:1px;
+    color:#ffffff;
 }
 
-.subtitle{
-    margin-top:10px;
-    font-size:28px;
-    color:#e5e7eb;
-    text-shadow:0 3px 10px rgba(0,0,0,.8);
+h1{
+    font-size:95px;
+    font-weight:900;
+    line-height:1.05;
+    text-shadow:0 8px 25px rgba(0,0,0,.85);
+}
+
+.gradient{
+    background:linear-gradient(90deg,#25D366,#ffffff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.tagline{
+    margin-top:18px;
+    font-size:38px;
+    font-weight:800;
+    line-height:1.4;
+    max-width:950px;
+    margin-inline:auto;
+    color:white;
+    text-shadow:0 5px 18px rgba(0,0,0,.9);
 }
 
 .main-btn{
-    margin-top:40px;
+    margin-top:50px;
     display:inline-block;
-    background:linear-gradient(135deg,#25D366,#128C7E);
-    color:white;
+    background:linear-gradient(135deg,#25D366,#ffffff);
+    color:#111;
     text-decoration:none;
-    padding:26px 60px;
+    padding:28px 68px;
     border-radius:999px;
     font-size:34px;
     font-weight:bold;
-    box-shadow:0 0 35px rgba(37,211,102,.6);
+    box-shadow:
+        0 0 25px rgba(37,211,102,.45),
+        0 0 60px rgba(255,255,255,.20);
     transition:0.3s ease;
 }
 
 .main-btn:hover{
-    transform:scale(1.03);
+    transform:scale(1.04);
 }
 
 .number{
     display:block;
-    margin-top:10px;
+    margin-top:12px;
     font-size:24px;
+    letter-spacing:1px;
 }
 
 .cards{
-    margin-top:80px;
+    margin-top:90px;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:28px;
 }
 
 .card{
-    background:rgba(0,0,0,.45);
-    border:1px solid rgba(255,255,255,.15);
-    border-radius:24px;
-    padding:35px 25px;
-    backdrop-filter:blur(12px);
-    transition:0.3s ease;
-    box-shadow:0 8px 25px rgba(0,0,0,.35);
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.16);
+    border-radius:28px;
+    padding:40px 28px;
+    backdrop-filter:blur(14px);
+    transition:0.35s ease;
+    box-shadow:0 12px 35px rgba(0,0,0,.35);
 }
 
 .card:hover{
-    transform:translateY(-8px);
-    background:rgba(0,0,0,.60);
+    transform:translateY(-10px) scale(1.02);
+    background:rgba(255,255,255,.12);
 }
 
 .icon{
-    font-size:52px;
-    margin-bottom:18px;
+    font-size:56px;
+    margin-bottom:20px;
 }
 
 .card h3{
     font-size:30px;
-    margin-bottom:15px;
+    margin-bottom:16px;
+    color:#25D366;
 }
 
 .card p{
     font-size:18px;
-    line-height:1.6;
-    color:#e5e7eb;
+    line-height:1.7;
+    color:#f3f4f6;
 }
 
 footer{
     text-align:center;
-    padding:30px 20px;
-    color:#ddd;
+    padding:32px 20px;
+    color:#eee;
     background:rgba(0,0,0,.35);
     backdrop-filter:blur(8px);
+    margin-top:80px;
 }
 
 @media(max-width:768px){
 
     h1{
-        font-size:56px;
+        font-size:58px;
     }
 
-    .subtitle{
-        font-size:20px;
+    .tagline{
+        font-size:26px;
     }
 
     .main-btn{
         font-size:24px;
-        padding:18px 35px;
+        padding:20px 38px;
     }
 
     .number{
         font-size:20px;
+    }
+
+    .card h3{
+        font-size:26px;
     }
 
 }
@@ -189,53 +236,58 @@ footer{
 
 <body>
 
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
+
 <div class="overlay">
 
 <header>
 <a class="top-btn"
-href="https://wa.me/919214886992?text=Hey%20I%20want%20to%20know%20more">
+href="https://wa.me/918273559985?text=Hey%20I%20want%20to%20know%20more">
 Contact Us on WhatsApp
 </a>
 </header>
 
 <div class="container">
 
-<h1>Tasky Talks</h1>
+<div class="logo-badge">TINDER BUYING COMPANY</div>
 
-<p class="subtitle">
-Professional • Secure • Fast Response • Trusted Service
-</p>
+<h1><span class="gradient">Tasky</span> Talks</h1>
+
+<div class="tagline">
+Turn Your Old Tinder Accounts Into Real Cash Now
+</div>
 
 <a class="main-btn"
-href="https://wa.me/919214886992?text=Hey%20I%20want%20to%20know%20more">
+href="https://wa.me/918273559985?text=Hey%20I%20want%20to%20know%20more">
 Connect on WhatsApp
-<span class="number">+91 92148 86992</span>
+<span class="number">+91 82735 59985</span>
 </a>
 
 <div class="cards">
 
 <div class="card">
-<div class="icon">🔒</div>
-<h3>Secure Communication</h3>
-<p>Your chats and information stay protected and encrypted.</p>
+<div class="icon">🔥</div>
+<h3>Instant Deals</h3>
+<p>Quick communication and smooth process with fast support anytime.</p>
 </div>
 
 <div class="card">
 <div class="icon">⚡</div>
-<h3>Fast Response</h3>
-<p>Quick replies and instant support whenever you contact us.</p>
+<h3>Fast Payments</h3>
+<p>Simple and hassle-free transactions with reliable customer support.</p>
 </div>
 
 <div class="card">
-<div class="icon">💸</div>
-<h3>Quick Payment</h3>
-<p>Safe and hassle-free payment process with trusted support.</p>
+<div class="icon">🔒</div>
+<h3>Secure Process</h3>
+<p>Your conversations and information remain protected and private.</p>
 </div>
 
 <div class="card">
-<div class="icon">👨‍💼</div>
+<div class="icon">💼</div>
 <h3>Professional Team</h3>
-<p>Experienced support team available to help you anytime.</p>
+<p>Experienced support team available to guide and assist you anytime.</p>
 </div>
 
 </div>
@@ -250,9 +302,3 @@ Connect on WhatsApp
 
 </body>
 </html>
-
-
-
-
-
-
